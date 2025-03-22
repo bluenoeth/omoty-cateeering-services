@@ -7,32 +7,98 @@ body {
     padding: 20px;
 }
 
-/* Headings */
-h1 {
+/* Header */
+header h1 {
     color: #3B82F6; /* Light Blue */
 }
 
-h2 {
-    color: #E0E7FF; /* Soft Blue */
+header p {
+    font-size: 20px;
 }
 
-/* Links */
-a {
+/* Tagline */
+.tagline {
+    font-size: 18px;
+    font-style: italic;
+    color: #FACC15; /* Gold */
+    margin-top: 10px;
+}
+
+/* Special Menu */
+.special-menu {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FACC15; /* Gold */
+    margin: 10px 0;
+}
+
+/* Meal Gallery */
+.meal-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.meal-gallery img {
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Services Section */
+#services {
+    background: #003366; /* Slightly lighter blue */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 80%;
+}
+
+#services ul {
+    list-style: none;
+    padding: 0;
+}
+
+#services li {
+    font-size: 18px;
+    padding: 5px 0;
+}
+
+/* Contact Section */
+#contact a {
     color: #3B82F6;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
 }
 
-a:hover {
+#contact a:hover {
     color: #E0E7FF;
     text-decoration: underline;
 }
 
-/* Image Style */
-img {
-    display: block;
-    margin: auto;
-    border-radius: 10px;
-    max-width: 100%;
+/* Footer */
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    #services {
+        width: 95%;
+    }
+
+    .meal-gallery img {
+        width: 100px;
+        height: 80px;
+    }
 }
