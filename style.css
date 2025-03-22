@@ -1,0 +1,38 @@
+/* General Page Style */
+body {
+    background-color: #001f3f; /* Dark Blue */
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Headings */
+h1 {
+    color: #3B82F6; /* Light Blue */
+}
+
+h2 {
+    color: #E0E7FF; /* Soft Blue */
+}
+
+/* Links */
+a {
+    color: #3B82F6;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #E0E7FF;
+    text-decoration: underline;
+}
+
+/* Image Style */
+img {
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+    max-width: 100%;
+}
