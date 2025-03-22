@@ -1,0 +1,43 @@
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+
+const services = [
+  { title: "Indoor & Outdoor Catering", description: "We provide catering services for both indoor and outdoor events.", image: "/images/indoor-outdoor.jpg" },
+  { title: "International & Local Dishes", description: "Serving all types of food, from international cuisine to local delicacies.", image: "/images/international-local.jpg" },
+  { title: "Specialty Dishes", description: "Amala onstop, Jollof rice, small chops, Asun, and Chapman.", image: "/images/specialty-dishes.jpg" },
+  { title: "Rental Services", description: "We offer rental services for events, including catering equipment and furniture.", image: "/images/rental-services.jpg" }
+];
+
+export default function CateringServices() {
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-blue-100 to-blue-300 p-6">
+      <div className="flex flex-col items-center mb-6">
+        <img src="/mnt/data/omoty.webp" alt="Omoty Catering Services Logo" className="h-32 rounded-full shadow-lg" />
+        <p className="mt-2 text-lg font-semibold text-blue-900 italic">"Right Recipes Always"</p>
+      </div>
+      <header className="text-center text-5xl font-extrabold text-blue-900 mb-8">Omoty Catering Services</header>
+      <motion.div 
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        {services.map((service, index) => (
+          <Card key={index} className="p-6 shadow-xl bg-white rounded-2xl transform hover:scale-105 transition-transform duration-300">
+            <CardContent>
+              <img src={service.image} alt={service.title} className="w-full h-48 object-cover rounded-xl mb-4" />
+              <h2 className="text-2xl font-semibold text-blue-900">{service.title}</h2>
+              <p className="mt-2 text-gray-700">{service.description}</p>
+            </CardContent>
+          </Card>
+        ))}
+      </motion.div>
+      <div className="mt-12 text-center">
+        <p className="text-xl font-semibold text-blue-900">Contact: 08139502600</p>
+        <Button className="bg-blue-700 hover:bg-blue-800 text-white px-8 py-4 rounded-full mt-6 text-lg shadow-md transition-all duration-300">Call Now</Button>
+      </div>
+    </div>
+  );
+}
